@@ -20,29 +20,27 @@ public class TPCSWPractica03 {
         
         Empleado empleado = new Empleado();
         //empleado.setClave(10);
-        empleado.setNombre("David");
-        empleado.setDireccion("Av 2");
-        empleado.setTelefono("282");
+        empleado.setNombre("juan");
+        empleado.setDireccion("av 12");
+        empleado.setTelefono("23231");
 
-//        Departamento departamento = new Departamento();
-//        departamento.setNombre("Administricacion");
         
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.getCurrentSession();
         Transaction t=session.beginTransaction();
         
-//        session.save(departamento);
-        Departamento dep = session.get(Departamento.class,1L);
-//        
-        if (dep != null){
-            System.out.println("Clave:" + dep.getClave()+" Nom:"+dep.getNombre());
-            Set<Empleado> lstEmplado = dep.getEmpleados();
-            for (Empleado empleado1 : lstEmplado){
-                System.out.println("clave: "+empleado1.getNombre());
-            }
-//            empleado.setDepto(dep);
-//            session.save(empleado);
-        }
+////        session.save(departamento);
+//        Departamento dep = session.get(Departamento.class,1L);
+////        
+//        if (dep != null){
+//            System.out.println("Clave:" + dep.getClave()+" Nom:"+dep.getNombre());
+//            Set<Empleado> lstEmplado = dep.getEmpleados();
+//            for (Empleado empleado1 : lstEmplado){
+//                System.out.println("clave: "+empleado1.getNombre());
+//            }
+////            empleado.setDepto(dep);
+////            session.save(empleado);
+//        }
 //        
         t.commit();
     }

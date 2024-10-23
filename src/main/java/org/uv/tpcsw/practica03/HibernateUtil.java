@@ -2,10 +2,7 @@
 package org.uv.tpcsw.practica03;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class HibernateUtil {
     private static final SessionFactory sessionFactory = buildSessionFactory();
